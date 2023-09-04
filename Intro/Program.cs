@@ -4,7 +4,7 @@
     {
         static void Main()
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Hello, L8!");
             int number = Simple(4);
             Console.Write(number);
         }
