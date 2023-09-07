@@ -19,6 +19,18 @@
             Console.WriteLine(@"*******");
         }
 
+        static double CtoF(double tempC)
+        {
+            double tempF = (tempC * 1.8) + 32;
+            return tempF;
+        }
+
+        static double FtoC(double tempF)
+        {
+            double tempC = (tempF / 1.8) - 32;
+            return tempC;
+        }
+
         static int Simple(int number)
         {
             return number * 2;
