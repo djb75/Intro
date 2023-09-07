@@ -9,6 +9,16 @@
             Console.Write(number);
         }
 
+        static void Q1()
+        {
+            Console.WriteLine(@"*******");
+            Console.WriteLine(@"*     *");
+            Console.WriteLine(@"*  0  *");
+            Console.WriteLine(@"* /|\ *");
+            Console.WriteLine(@"* / \ *");
+            Console.WriteLine(@"*******");
+        }
+
         static int Simple(int number)
         {
             return number * 2;
