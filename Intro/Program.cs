@@ -9,7 +9,7 @@
             Console.Write(number);
         }
 
-        static void Q1()
+        static void printStickMan()
         {
             Console.WriteLine(@"*******");
             Console.WriteLine(@"*     *");
@@ -29,6 +29,16 @@
         {
             double tempC = (tempF / 1.8) - 32;
             return tempC;
+        }
+
+        static double carpetCost(int width, int length, int price)
+        {
+            int cost = 50;   //Installation fee
+            int area = width * length;
+            cost += 3 * area;   //Underlay cost
+            cost += price * area;   //Carpet cost
+            cost += width * 2 + length * 2;  //Grippers 
+            return cost;
         }
 
         static int Simple(int number)
