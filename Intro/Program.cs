@@ -6,7 +6,10 @@
         {
             Console.WriteLine("Hello, L8!");
             int number = Simple(4);
-            Console.Write(number);
+            Console.WriteLine(number);
+            printStickMan();
+            double cost = carpetCost(7, 6, 17);
+            Console.WriteLine(cost);
         }
 
         static void printStickMan()
@@ -31,10 +34,10 @@
             return tempC;
         }
 
-        static double carpetCost(int width, int length, int price)
+        static double carpetCost(double width, double length, double price)
         {
-            int cost = 50;   //Installation fee
-            int area = width * length;
+            double cost = 50;   //Installation fee
+            double area = width * length;
             cost += 3 * area;   //Underlay cost
             cost += price * area;   //Carpet cost
             cost += width * 2 + length * 2;  //Grippers 
