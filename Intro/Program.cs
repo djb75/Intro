@@ -16,6 +16,9 @@
             Console.WriteLine("100F to C");
             double C = FtoC(100);
             Console.WriteLine(C);
+            Console.WriteLine("Ballpit calculations");
+            double balls = BallPitCalc(0.5, 1, 0.075);
+            Console.WriteLine(balls);
         }
 
         static void printStickMan()
@@ -55,5 +58,20 @@
         {
             return number * 2;
         }
+
+        static double BallPitCalc(double pitHeight, double pitRadius, double ballRadius)
+        {
+            double packingDensity = 0.75;
+            pitRadius = Math.Pow(pitRadius, 2);
+            double pitVol = pitHeight * pitRadius * Math.PI;
+            ballRadius = Math.Pow(ballRadius, 3);
+            double ballVol = (4d/3d) * ballRadius * Math.PI;
+            Console.WriteLine("4/3: ");
+            Console.WriteLine(4d / 3d);
+            double balls = (pitVol / ballVol) * packingDensity;
+            balls = Math.Ceiling(balls);
+            return balls;
+        }
+
     }
 }
