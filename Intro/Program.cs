@@ -10,6 +10,12 @@
             printStickMan();
             double cost = carpetCost(7, 6, 17);
             Console.WriteLine(cost);
+            Console.WriteLine("30C to F");
+            double F = CtoF(30);
+            Console.WriteLine(F);
+            Console.WriteLine("100F to C");
+            double C = FtoC(100);
+            Console.WriteLine(C);
         }
 
         static void printStickMan()
@@ -25,12 +31,13 @@
         static double CtoF(double tempC)
         {
             double tempF = (tempC * 1.8) + 32;
+
             return tempF;
         }
 
         static double FtoC(double tempF)
         {
-            double tempC = (tempF / 1.8) - 32;
+            double tempC = (tempF - 32) / 1.8;
             return tempC;
         }
 
