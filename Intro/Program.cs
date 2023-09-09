@@ -63,13 +63,26 @@
         {
             double packingDensity = 0.75;
             pitRadius = Math.Pow(pitRadius, 2);
+            Console.WriteLine("Pit radius^2:");
+            Console.WriteLine(pitRadius);
             double pitVol = pitHeight * pitRadius * Math.PI;
+            Console.WriteLine("Pit volume:");
+            Console.WriteLine(pitVol);
             ballRadius = Math.Pow(ballRadius, 3);
-            double ballVol = (4d/3d) * ballRadius * Math.PI;
-            Console.WriteLine("4/3: ");
-            Console.WriteLine(4d / 3d);
+            Console.WriteLine("Ball radius^3:");
+            Console.WriteLine(ballRadius);
+            const double fourThirds = 4d / 3d;
+            Console.WriteLine("Four thirds:");
+            Console.WriteLine(fourThirds);
+            double ballVol = fourThirds * ballRadius * Math.PI;
+            Console.WriteLine("Ball volume: ");
+            Console.WriteLine(ballVol); 
             double balls = (pitVol / ballVol) * packingDensity;
+            Console.WriteLine("Balls: ");
+            Console.WriteLine(balls);
             balls = Math.Ceiling(balls);
+            Console.WriteLine(balls);
+            //balls = Convert.ToInt32(balls);
             return balls;
         }
 
