@@ -87,7 +87,7 @@
             double pitVol = pitHeight * pitRadius * Math.PI;
             ballRadius = Math.Pow(ballRadius, 3);
             double ballVol = (4d/3d) * ballRadius * Math.PI;
-            double balls = (pitVol / ballVol) * packingDensity;
+            double balls = pitVol / (ballVol * packingDensity);
             balls = Math.Ceiling(balls);
             int ballsInt = Convert.ToInt32(balls);
             return ballsInt;
