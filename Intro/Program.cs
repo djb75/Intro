@@ -8,16 +8,37 @@
             int number = Simple(4);
             Console.WriteLine(number);
             printStickMan();
-            double cost = carpetCost(7, 6, 17);
+            Console.WriteLine("Enter area width:");
+            string? widthStr = Console.ReadLine();
+            double width = double.Parse(widthStr);
+            Console.WriteLine("Enter area length:");
+            string? lengthStr = Console.ReadLine(); 
+            double length = double.Parse(lengthStr);
+            Console.WriteLine("Enter price:");
+            string? priceStr = Console.ReadLine();
+            double price = double.Parse(priceStr);
+            double cost = carpetCost(width, length, price);
             Console.WriteLine(cost);
-            Console.WriteLine("30C to F");
-            double F = CtoF(30);
+            Console.WriteLine("Enter temperature in Celsius:");
+            string? CStr = Console.ReadLine();
+            double C = double.Parse(CStr);
+            double F = CtoF(C);
             Console.WriteLine(F);
-            Console.WriteLine("100F to C");
-            double C = FtoC(100);
+            Console.WriteLine("Enter temperature in Fahrenheit:");
+            string? FStr = Console.ReadLine();
+            double F = double.Parse(FStr);
+            double C = FtoC(F);
             Console.WriteLine(C);
-            Console.WriteLine("Ballpit calculations");
-            double balls = BallPitCalc(0.5, 1, 0.075);
+            Console.WriteLine("Enter pit height:");
+            string? pitHeightStr = Console.ReadLine();
+            double pitHeight = double.Parse(pitHeightStr);
+            Console.WriteLine("Enter pit radius:");
+            string? pitRadiusStr = Console.ReadLine();
+            double pitRadius = double.Parse(pitRadiusStr);
+            Console.WriteLine("Enter ball radius:");
+            string? ballRadiusStr = Console.ReadLine();
+            double ballRadius = double.Parse(ballRadiusStr);
+            int balls = BallPitCalc(pitHeight, pitRadius, ballRadius);
             Console.WriteLine(balls);
         }
 
@@ -59,32 +80,17 @@
             return number * 2;
         }
 
-        static double BallPitCalc(double pitHeight, double pitRadius, double ballRadius)
+        static int BallPitCalc(double pitHeight, double pitRadius, double ballRadius)
         {
             double packingDensity = 0.75;
             pitRadius = Math.Pow(pitRadius, 2);
-            Console.WriteLine("Pit radius^2:");
-            Console.WriteLine(pitRadius);
             double pitVol = pitHeight * pitRadius * Math.PI;
-            Console.WriteLine("Pit volume:");
-            Console.WriteLine(pitVol);
             ballRadius = Math.Pow(ballRadius, 3);
-            Console.WriteLine("Ball radius^3:");
-            Console.WriteLine(ballRadius);
-            const double fourThirds = 4d / 3d;
-            Console.WriteLine("Four thirds:");
-            Console.WriteLine(fourThirds);
-            double ballVol = fourThirds * ballRadius * Math.PI;
-            Console.WriteLine("Ball volume: ");
-            Console.WriteLine(ballVol); 
+            double ballVol = (4d/3d) * ballRadius * Math.PI;
             double balls = (pitVol / ballVol) * packingDensity;
-            Console.WriteLine("Balls: ");
-            Console.WriteLine(balls);
             balls = Math.Ceiling(balls);
-            Console.WriteLine(balls);
-            //balls = Convert.ToInt32(balls);
-            return balls;
+            int ballsInt = Convert.ToInt32(balls);
+            return ballsInt;
         }
-
     }
 }
