@@ -26,9 +26,9 @@
             Console.WriteLine(F);
             Console.WriteLine("Enter temperature in Fahrenheit:");
             string? FStr = Console.ReadLine();
-            double F = double.Parse(FStr);
-            double C = FtoC(F);
-            Console.WriteLine(C);
+            double F2 = double.Parse(FStr);
+            double C2 = FtoC(F2);
+            Console.WriteLine(C2);
             Console.WriteLine("Enter pit height:");
             string? pitHeightStr = Console.ReadLine();
             double pitHeight = double.Parse(pitHeightStr);
